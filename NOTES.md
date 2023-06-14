@@ -1,7 +1,7 @@
 ## Taco
 
--   Can't use taco without forcing client rendering or using use client specific wrappers
--   Taco import uses cjs which requires installing dependencies like lodash
+-   Can't currently use taco without forcing client rendering or using use client specific wrappers
+-   Taco import uses cjs, a note for the design system team but this shouldn't be the case
 
 ## Structure
 
@@ -16,8 +16,12 @@
 
 ## Data fetching
 
--   Important to note/document parallel loading should use Promise.all, to keep performance optimal and not introduce waterfalls from await in component render
+-   Important to note/document parallel loading should use Promise.all, to keep performance optimal and not introduce waterfalls from await in component render. I see this as something product developers will trip up on, maybe we can lint it somehow
 
 ## DX
 
--   Doing git operations on paths that include special routes (@something, [id], (..)something) requires the string in quotes
+-   Doing git operations on paths that include special routes (@something, [id], (..)something) requires the string in quotes, annoying
+
+## Caching
+
+-   There are some caching issues while they are in alpha/beta https://twitter.com/TkDodo/status/1660928385554456576
